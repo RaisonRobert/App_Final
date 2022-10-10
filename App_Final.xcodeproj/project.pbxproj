@@ -14,6 +14,8 @@
 		D3AA0E9128F253B0001BD2DC /* App_Final.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3AA0E8F28F253B0001BD2DC /* App_Final.xcdatamodeld */; };
 		D3AA0E9328F253B1001BD2DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3AA0E9228F253B1001BD2DC /* Assets.xcassets */; };
 		D3AA0E9628F253B1001BD2DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AA0E9428F253B1001BD2DC /* LaunchScreen.storyboard */; };
+		D3AA0EA128F25619001BD2DC /* DentistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AA0EA028F25619001BD2DC /* DentistTableViewController.swift */; };
+		D3AA0EA328F25730001BD2DC /* Dentist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AA0EA228F25730001BD2DC /* Dentist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		D3AA0E9228F253B1001BD2DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3AA0E9528F253B1001BD2DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3AA0E9728F253B1001BD2DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3AA0EA028F25619001BD2DC /* DentistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DentistTableViewController.swift; sourceTree = "<group>"; };
+		D3AA0EA228F25730001BD2DC /* Dentist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dentist.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +62,42 @@
 		D3AA0E8528F253B0001BD2DC /* App_Final */ = {
 			isa = PBXGroup;
 			children = (
-				D3AA0E8628F253B0001BD2DC /* AppDelegate.swift */,
-				D3AA0E8828F253B0001BD2DC /* SceneDelegate.swift */,
-				D3AA0E8A28F253B0001BD2DC /* ViewController.swift */,
+				D3AA0E9F28F253F2001BD2DC /* Controller */,
+				D3AA0E9E28F253EC001BD2DC /* View */,
+				D3AA0E9D28F253E5001BD2DC /* Model */,
+				D3AA0E9728F253B1001BD2DC /* Info.plist */,
+			);
+			path = App_Final;
+			sourceTree = "<group>";
+		};
+		D3AA0E9D28F253E5001BD2DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D3AA0E8F28F253B0001BD2DC /* App_Final.xcdatamodeld */,
+				D3AA0EA228F25730001BD2DC /* Dentist.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D3AA0E9E28F253EC001BD2DC /* View */ = {
+			isa = PBXGroup;
+			children = (
 				D3AA0E8C28F253B0001BD2DC /* Main.storyboard */,
 				D3AA0E9228F253B1001BD2DC /* Assets.xcassets */,
 				D3AA0E9428F253B1001BD2DC /* LaunchScreen.storyboard */,
-				D3AA0E9728F253B1001BD2DC /* Info.plist */,
-				D3AA0E8F28F253B0001BD2DC /* App_Final.xcdatamodeld */,
 			);
-			path = App_Final;
+			path = View;
+			sourceTree = "<group>";
+		};
+		D3AA0E9F28F253F2001BD2DC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D3AA0E8628F253B0001BD2DC /* AppDelegate.swift */,
+				D3AA0E8828F253B0001BD2DC /* SceneDelegate.swift */,
+				D3AA0E8A28F253B0001BD2DC /* ViewController.swift */,
+				D3AA0EA028F25619001BD2DC /* DentistTableViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +172,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3AA0E9128F253B0001BD2DC /* App_Final.xcdatamodeld in Sources */,
+				D3AA0EA328F25730001BD2DC /* Dentist.swift in Sources */,
 				D3AA0E8B28F253B0001BD2DC /* ViewController.swift in Sources */,
 				D3AA0E8728F253B0001BD2DC /* AppDelegate.swift in Sources */,
 				D3AA0E8928F253B0001BD2DC /* SceneDelegate.swift in Sources */,
+				D3AA0EA128F25619001BD2DC /* DentistTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
