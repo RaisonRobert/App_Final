@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D38C91B728F6251000E8A5E8 /* Consult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C91B628F6251000E8A5E8 /* Consult.swift */; };
+		D38C91BB28F7417C00E8A5E8 /* TipoDentista.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C91BA28F7417C00E8A5E8 /* TipoDentista.swift */; };
+		D38C91BD28F74FCD00E8A5E8 /* Marcar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C91BC28F74FCD00E8A5E8 /* Marcar.swift */; };
+		D38C91BF28F7548700E8A5E8 /* VisualizarConsultaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C91BE28F7548700E8A5E8 /* VisualizarConsultaTableViewController.swift */; };
 		D3AA0E8728F253B0001BD2DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AA0E8628F253B0001BD2DC /* AppDelegate.swift */; };
 		D3AA0E8928F253B0001BD2DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AA0E8828F253B0001BD2DC /* SceneDelegate.swift */; };
 		D3AA0E8B28F253B0001BD2DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AA0E8A28F253B0001BD2DC /* ViewController.swift */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D38C91B628F6251000E8A5E8 /* Consult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consult.swift; sourceTree = "<group>"; };
+		D38C91BA28F7417C00E8A5E8 /* TipoDentista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipoDentista.swift; sourceTree = "<group>"; };
+		D38C91BC28F74FCD00E8A5E8 /* Marcar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marcar.swift; sourceTree = "<group>"; };
+		D38C91BE28F7548700E8A5E8 /* VisualizarConsultaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizarConsultaTableViewController.swift; sourceTree = "<group>"; };
 		D3AA0E8328F253B0001BD2DC /* App_Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App_Final.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3AA0E8628F253B0001BD2DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3AA0E8828F253B0001BD2DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +83,9 @@
 			children = (
 				D3AA0E8F28F253B0001BD2DC /* App_Final.xcdatamodeld */,
 				D3AA0EA228F25730001BD2DC /* Dentist.swift */,
+				D38C91BA28F7417C00E8A5E8 /* TipoDentista.swift */,
+				D38C91B628F6251000E8A5E8 /* Consult.swift */,
+				D38C91BC28F74FCD00E8A5E8 /* Marcar.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -96,6 +107,7 @@
 				D3AA0E8828F253B0001BD2DC /* SceneDelegate.swift */,
 				D3AA0E8A28F253B0001BD2DC /* ViewController.swift */,
 				D3AA0EA028F25619001BD2DC /* DentistTableViewController.swift */,
+				D38C91BE28F7548700E8A5E8 /* VisualizarConsultaTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -171,12 +183,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D38C91BF28F7548700E8A5E8 /* VisualizarConsultaTableViewController.swift in Sources */,
 				D3AA0E9128F253B0001BD2DC /* App_Final.xcdatamodeld in Sources */,
 				D3AA0EA328F25730001BD2DC /* Dentist.swift in Sources */,
 				D3AA0E8B28F253B0001BD2DC /* ViewController.swift in Sources */,
+				D38C91B728F6251000E8A5E8 /* Consult.swift in Sources */,
 				D3AA0E8728F253B0001BD2DC /* AppDelegate.swift in Sources */,
+				D38C91BB28F7417C00E8A5E8 /* TipoDentista.swift in Sources */,
 				D3AA0E8928F253B0001BD2DC /* SceneDelegate.swift in Sources */,
 				D3AA0EA128F25619001BD2DC /* DentistTableViewController.swift in Sources */,
+				D38C91BD28F74FCD00E8A5E8 /* Marcar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

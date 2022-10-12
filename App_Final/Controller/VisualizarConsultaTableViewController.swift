@@ -1,15 +1,14 @@
 //
-//  DentistTableViewController.swift
+//  VisualizarConsultaTableViewController.swift
 //  App_Final
 //
-//  Created by Raison Robert on 08/10/22.
+//  Created by Raison Robert on 12/10/22.
 //
 
 import UIKit
 
-class DentistTableViewController: UITableViewController {
-    var dentist = Dentist().listDentist
-    var consulta = Marcar().listMarcar
+class VisualizarConsultaTableViewController: UITableViewController {
+    var visualiza = Marcar().listMarcar
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,37 +28,21 @@ class DentistTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return dentist.count
+        return visualiza.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "doctor", for: indexPath)
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "doctorConsult", for: indexPath)
+
         // Configure the cell...
-        cell.textLabel?.text = "\(dentist[indexPath.row].dentist) - Data: \(dentist[indexPath.row].dataDisponivel)"
+        cell.textLabel?.text = visualiza[indexPath.row].dentist
         return cell
     }
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // create the alert
-        let alert = UIAlertController(title: dentist[indexPath.row].dentist, message: "Consulta agendada com sucesso", preferredStyle: UIAlertController.Style.alert)
-
-            // add an action (button)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-        
-            // show the alert
-            self.present(alert, animated: true, completion: nil)
-        let consultMarcado = Consult(dentist: dentist[indexPath.row].dentist, data: dentist[indexPath.row].dataDisponivel)
-        consulta.append(consultMarcado)
-        Marcar().addValor(addMarcado: consulta)
-        for marcado in consulta{
-            print("Dentista: ",marcado.dentist)
-            print("Data: " , marcado.data)
-        }
-        
+        print("ok clicou")
     }
-    
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
