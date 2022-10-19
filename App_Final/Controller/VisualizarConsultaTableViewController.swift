@@ -8,10 +8,10 @@
 import UIKit
 
 class VisualizarConsultaTableViewController: UITableViewController {
-    var visualiza = Marcar().listMarcar
+    var visualiza = Marcar(addMarcado: <#Consult#>).listMarcar[<#Int#>]
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(visualiza[])
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

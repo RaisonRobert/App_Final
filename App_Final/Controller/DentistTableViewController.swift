@@ -52,7 +52,8 @@ class DentistTableViewController: UITableViewController {
             self.present(alert, animated: true, completion: nil)
         let consultMarcado = Consult(dentist: dentist[indexPath.row].dentist, data: dentist[indexPath.row].dataDisponivel)
         consulta.append(consultMarcado)
-        Marcar().addValor(addMarcado: consulta)
+        Marcar.init(addMarcado: consultMarcado)
+//        Marcar().addValor(addMarcado: consulta)
         for marcado in consulta{
             print("Dentista: ",marcado.dentist)
             print("Data: " , marcado.data)

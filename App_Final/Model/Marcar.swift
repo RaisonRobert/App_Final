@@ -8,8 +8,7 @@
 import Foundation
 class Marcar{
     var listMarcar = [Consult]()
-   
-    func addValor(addMarcado: [Consult]){
-        self.listMarcar = addMarcado
+    init(addMarcado: Consult){
+        self.listMarcar.append(addMarcado)
     }
 }
