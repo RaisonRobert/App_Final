@@ -9,10 +9,10 @@ import UIKit
 
 class DentistTableViewController: UITableViewController {
     var dentist = Dentist().listDentist
-    var consulta = Marcar().listMarcar
+    var consulta = Marcar.listMarcar
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -52,12 +52,13 @@ class DentistTableViewController: UITableViewController {
             self.present(alert, animated: true, completion: nil)
         let consultMarcado = Consult(dentist: dentist[indexPath.row].dentist, data: dentist[indexPath.row].dataDisponivel)
         consulta.append(consultMarcado)
-        Marcar.init(addMarcado: consultMarcado)
-//        Marcar().addValor(addMarcado: consulta)
+        Marcar.listMarcar.append(consultMarcado)
         for marcado in consulta{
             print("Dentista: ",marcado.dentist)
             print("Data: " , marcado.data)
         }
+        
+        
         
     }
     

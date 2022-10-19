@@ -6,9 +6,9 @@
 //
 
 import Foundation
-class Marcar{
-    var listMarcar = [Consult]()
-    init(addMarcado: Consult){
-        self.listMarcar.append(addMarcado)
-    }
+public struct Marcar{
+    static var listMarcar = [Consult]()
+//    init(addMarcado: Consult){
+//        self.listMarcar.append(addMarcado)
+//    }
 }
