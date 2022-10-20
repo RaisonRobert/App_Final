@@ -8,11 +8,15 @@
 import UIKit
 
 class DentistTableViewController: UITableViewController {
-    var dentist = Dentist().listDentist
-    var consulta = Marcar.listMarcar
+    
+    var dentist = [TipoDentista]()
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        if (Dentista.listDentist.isEmpty){
+            dentist = Dentist().listDentist
+        }else{
+            dentist = Dentista.listDentist
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -51,14 +55,10 @@ class DentistTableViewController: UITableViewController {
             // show the alert
             self.present(alert, animated: true, completion: nil)
         let consultMarcado = Consult(dentist: dentist[indexPath.row].dentist, data: dentist[indexPath.row].dataDisponivel)
-        consulta.append(consultMarcado)
         Marcar.listMarcar.append(consultMarcado)
-        for marcado in consulta{
-            print("Dentista: ",marcado.dentist)
-            print("Data: " , marcado.data)
-        }
-        
-        
+        dentist.remove(at: indexPath.row)
+        Dentista.listDentist = dentist
+        tableView.reloadData()
         
     }
     

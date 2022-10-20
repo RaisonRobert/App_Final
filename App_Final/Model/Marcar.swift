@@ -8,7 +8,7 @@
 import Foundation
 public struct Marcar{
     static var listMarcar = [Consult]()
-//    init(addMarcado: Consult){
-//        self.listMarcar.append(addMarcado)
-//    }
+}
+public struct Dentista{
+    static var listDentist = [TipoDentista]()
 }

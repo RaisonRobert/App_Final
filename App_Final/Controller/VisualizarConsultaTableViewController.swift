@@ -9,6 +9,7 @@ import UIKit
 
 class VisualizarConsultaTableViewController: UITableViewController {
     var visualiza = Marcar.listMarcar
+    var selecionado = Consult(dentist: "", data: "")
     override func viewDidLoad() {
         super.viewDidLoad()
         for marcado in visualiza{
@@ -43,7 +44,8 @@ class VisualizarConsultaTableViewController: UITableViewController {
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("ok clicou")
+        selecionado = visualiza[indexPath.row]
+        performSegue(withIdentifier: "visualizar", sender: self)
     }
 
     /*
@@ -81,14 +83,19 @@ class VisualizarConsultaTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "visualizar" {
+            if let next = segue.destination as? AlterarDadosViewController {
+                next.selecionado = selecionado
+            }
+        }
     }
-    */
+    
 
 }
