@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D3280DF629018EA300B14501 /* AlterarDadosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3280DF529018EA300B14501 /* AlterarDadosViewController.swift */; };
+		D3280DFA2901D15000B14501 /* EditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3280DF92901D15000B14501 /* EditTableViewController.swift */; };
 		D38C91B728F6251000E8A5E8 /* Consult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C91B628F6251000E8A5E8 /* Consult.swift */; };
 		D38C91BB28F7417C00E8A5E8 /* TipoDentista.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C91BA28F7417C00E8A5E8 /* TipoDentista.swift */; };
 		D38C91BD28F74FCD00E8A5E8 /* Marcar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C91BC28F74FCD00E8A5E8 /* Marcar.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		D3280DF529018EA300B14501 /* AlterarDadosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterarDadosViewController.swift; sourceTree = "<group>"; };
+		D3280DF92901D15000B14501 /* EditTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTableViewController.swift; sourceTree = "<group>"; };
 		D38C91B628F6251000E8A5E8 /* Consult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consult.swift; sourceTree = "<group>"; };
 		D38C91BA28F7417C00E8A5E8 /* TipoDentista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipoDentista.swift; sourceTree = "<group>"; };
 		D38C91BC28F74FCD00E8A5E8 /* Marcar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marcar.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				D3AA0E8828F253B0001BD2DC /* SceneDelegate.swift */,
 				D3AA0E8A28F253B0001BD2DC /* ViewController.swift */,
 				D3AA0EA028F25619001BD2DC /* DentistTableViewController.swift */,
+				D3280DF92901D15000B14501 /* EditTableViewController.swift */,
 				D38C91BE28F7548700E8A5E8 /* VisualizarConsultaTableViewController.swift */,
 				D3280DF529018EA300B14501 /* AlterarDadosViewController.swift */,
 			);
@@ -187,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D38C91BF28F7548700E8A5E8 /* VisualizarConsultaTableViewController.swift in Sources */,
+				D3280DFA2901D15000B14501 /* EditTableViewController.swift in Sources */,
 				D3AA0E9128F253B0001BD2DC /* App_Final.xcdatamodeld in Sources */,
 				D3AA0EA328F25730001BD2DC /* Dentist.swift in Sources */,
 				D3AA0E8B28F253B0001BD2DC /* ViewController.swift in Sources */,

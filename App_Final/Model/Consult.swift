@@ -7,11 +7,11 @@
 
 import Foundation
 class Consult : NSObject {
-    var dentist: String
-    var data: String
-    init( dentist: String, data: String){
-        self.dentist = dentist
-        self.data = data
+var dentist: String
+var data: String
+init( dentist: String, data: String){
+    self.dentist = dentist
+    self.data = data
 
-    }
+}
 }

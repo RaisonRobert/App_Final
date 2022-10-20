@@ -7,10 +7,10 @@
 
 import Foundation
 class TipoDentista{
-    var dentist: String
-    var dataDisponivel: String
-    init( dentista : String, data: String ){
-        self.dentist = dentista
-        self.dataDisponivel = data
-    }
+var dentist: String
+var dataDisponivel: String
+init( dentista : String, data: String ){
+    self.dentist = dentista
+    self.dataDisponivel = data
+}
 }

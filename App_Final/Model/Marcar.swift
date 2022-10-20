@@ -7,8 +7,8 @@
 
 import Foundation
 public struct Marcar{
-    static var listMarcar = [Consult]()
+static var listMarcar = [Consult]()
 }
 public struct Dentista{
-    static var listDentist = [TipoDentista]()
+static var listDentist = [TipoDentista]()
 }
