@@ -8,14 +8,16 @@
 import UIKit
 
 class DentistTableViewController: UITableViewController {
-
-var dentist = [TipoDentista]()
+    var dentist = [TipoDentista]()
 override func viewDidLoad() {
     super.viewDidLoad()
-    if (Dentista.listDentist.isEmpty){
+    buscarMarcado()
+    buscarDentista()
+    if (dentist.isEmpty){
         dentist = Dentist().listDentist
+        salvarDentista()
     }else{
-        dentist = Dentista.listDentist
+        buscarDentista()
     }
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = false
@@ -23,7 +25,48 @@ override func viewDidLoad() {
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem
 }
-
+    let arquivoMarcado = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathExtension("consultorio.odotonlogico")
+    let arquivoDentista = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathExtension("list.dentista")
+    func buscarDentista(){
+        do{
+            if let dados = try? Data(contentsOf: arquivoDentista!){
+                let decodificador = PropertyListDecoder()
+                dentist = try decodificador.decode([TipoDentista].self, from: dados)
+            }
+    }catch {
+        print("Erro ao buscar: \(error)")
+    }
+    }
+    func salvarDentista(){
+        
+        let codificador = PropertyListEncoder()
+        do{
+            let dados = try codificador.encode(dentist)
+            try dados.write(to: self.arquivoDentista!)
+        } catch{
+            print("Erro ao gravar: \(error)")
+        }
+    }
+    func buscarMarcado(){
+        do{
+            if let dados = try? Data(contentsOf: arquivoMarcado!){
+                let decodificador = PropertyListDecoder()
+                Marcar.listMarcar = try decodificador.decode([Consult].self, from: dados)
+            }
+    }catch {
+        print("Erro ao buscar: \(error)")
+    }
+    }
+    func salvarMarcado(){
+        
+        let codificador = PropertyListEncoder()
+        do{
+            let dados = try codificador.encode(Marcar.listMarcar)
+            try dados.write(to: self.arquivoMarcado!)
+        } catch{
+            print("Erro ao gravar: \(error)")
+        }
+    }
 // MARK: - Table view data source
 
 override func numberOfSections(in tableView: UITableView) -> Int {
@@ -58,6 +101,8 @@ override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: Inde
     Marcar.listMarcar.append(consultMarcado)
     dentist.remove(at: indexPath.row)
     Dentista.listDentist = dentist
+    salvarDentista()
+    salvarMarcado()
     tableView.reloadData()
     
 }

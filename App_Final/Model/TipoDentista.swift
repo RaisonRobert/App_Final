@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class TipoDentista{
+class TipoDentista: Codable{
 var dentist: String
 var dataDisponivel: String
 init( dentista : String, data: String ){

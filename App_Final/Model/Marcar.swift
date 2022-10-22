@@ -12,3 +12,5 @@ static var listMarcar = [Consult]()
 public struct Dentista{
 static var listDentist = [TipoDentista]()
 }
+
+

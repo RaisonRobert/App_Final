@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class Consult : NSObject {
+class Consult : Codable {
 var dentist: String
 var data: String
 init( dentist: String, data: String){
